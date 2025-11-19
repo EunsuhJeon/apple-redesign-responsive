@@ -21,7 +21,9 @@ nav ul{
     display: inline-block;
 }
 
-/* header */
+/* =========================
+   Header
+========================= */
 header{
     z-index: 10;
     position: fixed;
@@ -116,7 +118,9 @@ header{
     font-size: 12px;
 }
 
-/* main */
+/* =========================
+   Main
+========================= */
 main {
   margin: 0;
   padding: 0;
@@ -127,6 +131,9 @@ section {
   padding: 0;
 }
 
+/* =========================
+   Index page
+========================= */
 .copy-wrapper{
     width: 100%;
     height: auto;
@@ -219,7 +226,9 @@ section {
     color: #ffffff;
 }
 
-/* store page */
+/* =========================
+   Store page
+========================= */
 .store-wrapper{
     width: 100%;
     height: 100%;
@@ -403,7 +412,9 @@ section {
     padding: 70px 0 20px 15px;
 }
 
-/* accessories page */
+/* =========================
+   Accessories page
+========================= */
 .acc-banner-section img{
     width: 100%;
 }
@@ -547,7 +558,9 @@ section {
     align-self: end;
 }
 
-/* support page */
+/* =========================
+   Support page
+========================= */
 .banner-wrapper{
   width: 100%;
   height: 600px;
@@ -627,7 +640,9 @@ section {
     padding: 0 20px;
 }
 
-/* footer */
+/* =========================
+   Footer
+========================= */
 footer{
     width: 100%;
     background-color: rgb(245, 245, 247);
