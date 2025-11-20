@@ -304,6 +304,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 
 .store-flex-box > div{
@@ -335,7 +336,7 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     border-radius: 18px;
     margin-right: 20px;
-    width: 390px;
+    width: 100%;
 }
 
 .store-prod-img{
@@ -429,7 +430,7 @@ section {
 
 .acc-banner div{
     position: absolute;
-    top: 160px;
+    top: 15%;
     right: 200px;
 }
 
