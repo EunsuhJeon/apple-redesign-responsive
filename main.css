@@ -147,13 +147,23 @@ section {
 }
 
 .copy-wrapper h2{
-    font-size: 56px;
+    font-size: 32px;
     font-weight: 500;
 }
 
 .copy-wrapper p{
-    font-size: 28px;
+    font-size: 19px;
     font-weight: 300;
+}
+
+@media (min-width: 768px){
+    .copy-wrapper h2{
+        font-size: 56px;
+    }
+
+    .copy-wrapper p{
+        font-size: 28px;
+    }
 }
 
 .copy-button a{
@@ -177,9 +187,35 @@ section {
     color: #ffffff;
 }
 
+.img-wrapper{
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    position: relative;
+}
+
 .content-section img{
     width: 100%;
+    height: 190px;
+    overflow: hidden;
+    position: relative;
 }
+
+@media (min-width: 768px){
+    .img-wrapper{
+        height: 350px;
+    }
+
+    .content-section img{
+        height: 350px;
+    }
+}
+
+.content-section > div{
+    height: inherit;
+    padding: 5px 0;
+}
+
 
 .section-iphonAir .copy-wrapper{
     background-color: rgb(245, 245, 247);
@@ -191,29 +227,63 @@ section {
 }
 
 .item-wrapper{
-    width: 49%;
+    /* width: 49%; */
     display: inline-block;
-    padding: 5px;
+    padding: 5px 0;
     position: relative;
 }
 
 .item-wrapper img{
     width: 100%;
+    height: 500px;
+}
+
+@media (min-width: 768px){
+    .item-wrapper img{
+        height: 490px;
+    }
+
+    .item-wrapper{
+        padding: 5px;
+    }
+}
+
+@media (min-width: 1024px){
+    .item-wrapper img{
+        height: 580px;
+    }
 }
 
 .section-collection .copy-wrapper{
-    padding-top: 60px;
+    /* padding-top: 60px; */
+    padding-top: 40px;
     position: absolute;
     left: 0;
 }
 
 .section-collection .copy-wrapper h2{
-    font-size: 40px;
+    font-size: 32px;
+}
+
+@media (min-width: 1025px){
+    .section-collection .copy-wrapper{
+        /* padding-top: 60px; */
+        padding-top: 60px;
+    }
+
+    .section-collection .copy-wrapper h2{
+        font-size: 40px;
+    }
+
+    .section-collection .copy-wrapper p{
+        font-size: 21;
+        padding-top: 10px;
+    }
 }
 
 .section-collection .copy-wrapper p{
-    font-size: 21px;
-    padding-top: 10px;
+    font-size: 19px;
+    padding-top: 5px;
 }
 
 .section-collection .copy-button a{
@@ -309,6 +379,10 @@ section {
 
 .store-flex-box > div{
     position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    height: 480px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .store-item-desc{
@@ -332,17 +406,17 @@ section {
 }
 
 .store-item-section img{
-    height: 480px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    border-radius: 18px;
+    height: 100%;
     margin-right: 20px;
     width: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .store-prod-img{
-    width: 330px;
+    width: 100%;
     height: 480px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); */
     border-radius: 18px;
     margin-right: 20px;
 }

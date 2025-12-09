@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <header>
@@ -110,8 +112,8 @@
     </header>
     <main>
         <section class="content-section section-iphon17pro">
-            <div>
-                <div class="copy-wrapper">
+            <div class="flex flex-col">
+                <div class="copy-wrapper h-[inherit]">
                     <h2>iPhone 17 Pro</h2>
                     <p>All out Pro.</p>
                     <div class="copy-button">
@@ -125,8 +127,8 @@
             </div>
         </section>
         <section class="content-section section-iphonAir">
-            <div>
-                <div class="copy-wrapper">
+            <div class="flex flex-col">
+                <div class="copy-wrapper h-[inherit]">
                     <h2>iPhone Air</h2>
                     <p>The thinnest iPhone ever. <br>With the power of pro inside.</p>
                     <div class="copy-button">
@@ -139,7 +141,8 @@
                 </div>
             </div>
         </section>
-        <section class="section-collection">
+        <section class="section-collection grid grid-cols-1
+                        md:grid-cols-2">
             <div class="item-wrapper">
                 <div class="copy-wrapper">
                     <h2>AirPods Pro 3</h2>
