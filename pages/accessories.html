@@ -8,16 +8,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <header>
-        <nav id="globalnav">
+        <nav id="globalnav"
+            class="justify-between px-4
+                  lg:justify-center">
             <!--logo--> 
             <a href="../index.html">
-                <img src="../images/logo.png" alt="Apple logo">
+                <img src="../images/logo-bl.png" alt="Apple logo" />
             </a>
-            <ul>
-                <!-- <li><a href="../index.html">Home</a></li> -->
+            <input type="checkbox" name="menu" id="menu"
+                class="peer hidden">
+            <label for="menu"
+                    class="lg:hidden">
+            <img src="../images/menu.png" alt="menu">
+            </label>
+            <!-- ============================
+                navigation (mobile only)
+            ============================ -->
+            <!-- mobile navigation -->
+            <nav class="fixed top-0 left-0 bg-[#fafafc] flex flex-col gap-8 w-full 
+                        h-[47rem] z-[100] py-4 px-4 items-center font-light text-[0.9rem]
+                        -translate-y-full opacity-0 peer-checked:translate-y-0 peer-checked:opacity-100
+                        transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
+                        md:hidden md:peer-checked:hidden">
+                <label for="menu"
+                        class="lg:hidden self-end">
+                <img src="../images/close.png" alt="close">
+                </label>
+                <div class="flex flex-col items-start gap-8 self-start pl-8 text-[1.8rem] font-medium">
+                    <a href="../index.html" class="hover:text-gray-500">Home</a>
+                    <a href="./store.html" class="hover:text-gray-500">Store</a>
+                    <a href="./accessories.html" class="hover:text-gray-500">Accessories</a>
+                    <a href="./support.html" class="hover:text-gray-500">Support</a>
+                </div>
+            </nav>
+            <ul class="hidden
+                    lg:inline-block">
                 <li>
                     <a href="./store.html">Store</a>
                     <div class="dropdown-panel">
@@ -102,15 +132,22 @@
                         </div>
                     </div>
                 </li>
-            </ul>
+            </>
         </nav>
     </header>
     <main>
         <section class="acc-banner-section">
-            <div class="acc-banner">
-                <img src="../images/acc-banner.png" alt="acc-banner">
+            <div class="acc-banner
+                        flex justify-center text-center
+                        md:text-right">
+                <img src="../images/acc-banner.png" alt="acc-banner"
+                    class="hidden
+                            md:inline-block">
+                <img src="../images/acc-banner-sm.png" alt="acc-banner-sm"
+                    class="mobile-banner inline-block
+                            md:hidden">
                 <div>
-                    <h2>Meet your<br>match.</h2>
+                    <h2>Meet your match.</h2>
                     <p>
                     Pair your iPhone with a case, <br>wallet or Crossbody Strap in <br>fresh new textures and colours.
                     </p>
@@ -122,8 +159,11 @@
             </div>
         </section>
         <section class="acc-search-section">
-            <div>
-                <h2>Find the accessories you’re looking for.</h2>
+            <div class="text-center">
+                <h2 class="text-[24px] font-medium
+                            md:text-[32px]">
+                    Find the accessories you’re looking for.
+                </h2>
             </div>
             <div class="search-wrapper">
                 <input type="text" name="search" placeholder="Search Accessories">

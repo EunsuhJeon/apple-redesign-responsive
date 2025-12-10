@@ -657,8 +657,15 @@ section {
     width: 100%;
 }
 
+.mobile-banner{
+    width: 736px;
+    height: 440px;
+    object-fit: cover;
+}
+
 .acc-banner{
-    text-align: right;
+    /* text-align: right; */
+    position: relative;
 }
 
 .acc-banner img{
@@ -667,26 +674,53 @@ section {
 
 .acc-banner div{
     position: absolute;
-    top: 15%;
-    right: 200px;
+    top: 6%;
 }
 
 .acc-banner div h2{
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 500;
 }
 
 .acc-banner div p{
-    font-size: 20px;
+    font-size: 19px;
     padding: 15px 0;
     font-weight: 300;
 }
 
 .acc-banner div ul{
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 300;
     list-style: none;
 }
+
+
+@media (min-width: 768px){
+    .acc-banner div{
+        top: 0;
+        right: 20px;
+    }
+}
+
+@media (min-width: 1024px){
+    .acc-banner div h2{
+        font-size: 48px;
+    }
+
+    .acc-banner div p{
+        font-size: 20px;
+    }
+
+    .acc-banner div ul{
+        font-size: 20px;
+    }
+
+    .acc-banner div{
+        top: 15%;
+        right: 200px;
+    }
+}
+
 
 .acc-banner div ul a:link,
 .acc-banner div ul a:visited{
@@ -711,8 +745,8 @@ section {
 }
 
 .acc-search-section h2{
-    font-size: 32px;
-    font-weight: 500;
+    /* font-size: 32px; */
+    /* font-weight: 500; */
 }
 
 .acc-icons-section{
@@ -725,13 +759,25 @@ section {
     padding: 50px 0;
     display: grid;
     grid-template-areas: 
-    "mac ipad iphone watch vision"
-    ". airpods tv beats .";
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 188px 188px;
+    "mac ipad"
+    "iphone watch"
+    "vision airpods" 
+    "tv beats";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4,1fr);
     width: 70%;
     border-top: 1px solid rgb(210, 210, 215);
     gap: 30px;
+}
+
+@media (min-width: 768px){
+    .acc-icons-wrapper{
+        grid-template-areas: 
+        "mac ipad iphone watch vision"
+        ". airpods tv beats .";
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
 }
 
 .mac{
@@ -767,27 +813,32 @@ section {
 }
 
 .acc-icons-wrapper > div{
+    gap: 1rem;
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 143px auto;
+    /* grid-template-rows: 143px auto; */
     align-items: center;
     justify-items: center;
 }
 
 .acc-icons-wrapper img{
-    width: 75px;
-    height: 75px;
+    max-width: 75px;
+    max-height: 75px;
+    width: 70%;
+    height: 70%;
 }
 
 .acc-icons-wrapper > div > div{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 143px;
-    height: 143px;
+    width: 100%;
     border-radius: 50%;
     border: 1px solid rgb(210, 210, 215);
+    max-width: 143px;
+    max-height: 143px;
+    aspect-ratio: 1;
 }
 
 .acc-icons-wrapper a{
@@ -871,11 +922,17 @@ section {
 }
 
 .search-wrapper input{
-    width: 600px;
+    width: 330px;
     height: 55px;
     border: 1px solid rgb(210, 210, 215);
     border-radius: 12px;
     padding: 0 20px;
+}
+
+@media (min-width: 768px){
+    .search-wrapper input{
+        width: 600px;
+    }
 }
 
 /* =========================
