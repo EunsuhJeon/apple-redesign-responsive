@@ -852,15 +852,15 @@ section {
 ========================= */
 .banner-wrapper{
   width: 100%;
-  height: 600px;
+  /* height: 600px; */
   overflow: hidden;
   box-sizing: border-box;
   padding-top: 50px;
 }
 
 .banner-wrapper img {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   object-fit: cover;  
   object-position: center;
 }

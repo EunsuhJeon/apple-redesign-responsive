@@ -8,25 +8,58 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .support-wrapper{
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 100px 200px 300px 100px 100px;
+            display: flex;
+            flex-direction: column;
+            /* grid-template-columns: 1fr;
+            grid-template-rows: 100px 200px 300px 100px 100px; */
             text-align: center;
             align-items: center;
             padding-bottom: 100px;
+            gap: 3rem;
         }
     </style>
 </head>
 <body>
     <header>
-        <nav id="globalnav">
-            <!--logo--> 
+        <nav id="globalnav"    
+            class="justify-between px-4
+                  lg:justify-center">
+            <!--logo-->
             <a href="../index.html">
-                <img src="../images/logo.png" alt="Apple logo">
+                <img src="../images/logo-bl.png" alt="Apple logo" />
             </a>
-            <ul>
+            <input type="checkbox" name="menu" id="menu"
+                    class="peer hidden">
+            <label for="menu"
+                    class="lg:hidden">
+            <img src="../images/menu.png" alt="menu">
+            </label>
+            <!-- ============================
+                navigation (mobile only)
+            ============================ -->
+            <!-- mobile navigation -->
+            <nav class="fixed top-0 left-0 bg-[#fafafc] flex flex-col gap-8 w-full 
+                        h-[47rem] z-[100] py-4 px-4 items-center font-light text-[0.9rem]
+                        -translate-y-full opacity-0 peer-checked:translate-y-0 peer-checked:opacity-100
+                        transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
+                        md:hidden md:peer-checked:hidden">
+                <label for="menu"
+                        class="lg:hidden self-end">
+                <img src="../images/close.png" alt="close">
+                </label>
+                <div class="flex flex-col items-start gap-8 self-start pl-8 text-[1.8rem] font-medium">
+                    <a href="../index.html" class="hover:text-gray-500">Home</a>
+                    <a href="./store.html" class="hover:text-gray-500">Store</a>
+                    <a href="./accessories.html" class="hover:text-gray-500">Accessories</a>
+                    <a href="./support.html" class="hover:text-gray-500">Support</a>
+                </div>
+            </nav>
+            <ul class="hidden
+                    lg:inline-block">
                 <li>
                     <a href="./store.html">Store</a>
                     <div class="dropdown-panel">
@@ -115,14 +148,24 @@
         </nav>
     </header>
     <main>
-        <section class="banner-wrapper">
-            <img src="../images/support-banner.png" alt="support-banner">
+        <section class="banner-wrapper flex justify-center
+                        md:h-[600px]">
+            <img src="../images/support-banner.png" alt="support-banner"
+                class="hidden w-full h-full
+                        md:inline-block">
+            <img src="../images/support-apple-logo.png" alt="support-logo"
+                class="w-[160px] h-[160px]
+                        md:hidden">
         </section>
-        <section class="support-wrapper">
+        <section class="support-wrapper pt-4
+                        md:gap-24 md:pt-16">
             <div>
-                <h1>Apple Support</h1>
+                <h1 class="text-[40px] font-medium
+                            md:text-[48px]">Apple Support</h1>
             </div>
-            <div class="support-img-box">
+            <div class="support-img-box flex-wrap
+                        md:px-[140px]
+                        lg:px-0">
                 <div>
                     <img src="../images/mac_small.png" alt="items-iMac" />
                     <a href="#">Mac</a>
@@ -148,7 +191,7 @@
                     <a href="#">AirPods</a>
                 </div>
             </div>
-            <div class="as-title-wrapper" style="gap: 25px;">
+            <div class="as-title-wrapper flex-wrap" style="gap: 25px;">
                 <div>
                     <img src="../images/as-password.svg" alt="as-password">
                     <a href="#">Forgot Apple Account password</a>
