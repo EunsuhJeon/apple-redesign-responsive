@@ -11,15 +11,46 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <header>
-      <nav id="globalnav">
+      <nav id="globalnav"
+            class="justify-between px-4
+                  lg:justify-center">
         <!--logo-->
         <a href="../index.html">
-          <img src="../images/logo.png" alt="Apple logo" />
+          <img src="../images/logo-bl.png" alt="Apple logo" />
         </a>
-        <ul>
+        <input type="checkbox" name="menu" id="menu"
+                class="peer hidden">
+        <label for="menu"
+                class="lg:hidden">
+          <img src="../images/menu.png" alt="menu">
+        </label>
+        <!-- ============================
+            navigation (mobile only)
+        ============================ -->
+        <!-- mobile navigation -->
+        <nav class="fixed top-0 left-0 bg-[#fafafc] flex flex-col gap-8 w-full 
+                    h-[47rem] z-[100] py-4 px-4 items-center font-light text-[0.9rem]
+                    -translate-y-full opacity-0 peer-checked:translate-y-0 peer-checked:opacity-100
+                    transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
+                    md:hidden md:peer-checked:hidden">
+            <label for="menu"
+                    class="lg:hidden self-end">
+              <img src="../images/close.png" alt="close">
+            </label>
+            <div class="flex flex-col items-start gap-8 self-start pl-8 text-[1.8rem] font-medium">
+                <a href="#" class="hover:text-gray-500">Home</a>
+                <a href="#" class="hover:text-gray-500">Store</a>
+                <a href="#" class="hover:text-gray-500">Accessories</a>
+                <a href="#" class="hover:text-gray-500">Support</a>
+            </div>
+        </nav>
+        <ul class="hidden
+                  lg:inline-block">
           <li>
             <a href="#">Store</a>
             <div class="dropdown-panel">
@@ -109,65 +140,84 @@
     </header>
     <main>
       <div class="store-wrapper">
-        <section class="store-title-section">
-          <div id="store-title">
-            <span class="color-337ae5">S</span><span class="color-408fe5">t</span><span class="color-8a8198">o</span><span class="color-d4734a">r</span><span class="color-ea6b2e">e</span>
+        <div class="dd-container">
+          <div class="dd-colors">
+            <div class="dd-color dd-blue"></div>
+            <div class="dd-color dd-orange"></div>
+            <div class="dd-color dd-yellow-orange"></div>
+            <div class="dd-color dd-blue-yellow"></div>
           </div>
-          <div id="store-description">
+        </div>
+        <section class="store-title-section">
+          <div id="store-title"
+                class="md:float-left">
+            <h1 class="inline-block">Store</h1>
+          </div>
+          <div id="store-description"
+                class="md:float-right">
             <p>Give something special <br />this holiday.</p>
             <a href="#">Find an Apple Store</a>
           </div>
-          <div class="store-item-preview-wrapper">
-            <div>
-              <img src="../images/items-iMac.png" alt="items-iMac" />
-              <a href="#">Mac</a>
-            </div>
-            <div>
-                <img src="../images/items-iphone.png" alt="items-iphone" />
-                <a href="#">iPhone</a>
-            </div>
-            <div>
-                <img src="../images/items-ipad.png" alt="items-ipad" />
-                <a href="#">iPad</a>
-            </div>
-            <div>
-                <img src="../images/items-watch.png" alt="items-watch" />
-                <a href="#">Apple Watch</a>
-            </div>
-            <div>
-                <img src="../images/items-vision.png" alt="items-vision" />
-                <a href="#">Apple Vision</a>
-            </div>
-            <div>
-                <img src="../images/items-airpods.png" alt="items-airpods" />
-                <a href="#">AirPods</a>
+          <div class="slider">
+            <div class="store-item-preview-wrapper 
+                        md:pt-[50px]">
+              <div>
+                <img src="../images/items-iMac.png" alt="items-iMac" />
+                <a href="#">Mac</a>
+              </div>
+              <div>
+                  <img src="../images/items-iphone.png" alt="items-iphone" />
+                  <a href="#">iPhone</a>
+              </div>
+              <div>
+                  <img src="../images/items-ipad.png" alt="items-ipad" />
+                  <a href="#">iPad</a>
+              </div>
+              <div>
+                  <img src="../images/items-watch.png" alt="items-watch" />
+                  <a href="#">Apple Watch</a>
+              </div>
+              <div>
+                  <img src="../images/items-vision.png" alt="items-vision" />
+                  <a href="#">Apple Vision</a>
+              </div>
+              <div>
+                  <img src="../images/items-airpods.png" alt="items-airpods" />
+                  <a href="#">AirPods</a>
+              </div>
             </div>
           </div>
         </section>
         <section class="store-item-section">
-          <div class="store-section-title">
-            <span class="color-337ae5">Th</span><span class="color-408fe5">e</span><span class="color-8a8198"> la</span><span class="color-d4734a">te</span><span class="color-ea6b2e">st. </span><span class="color-gray">Truly awe-inspired gifts.</span>
+          <div class="store-section-title
+                      md:pt-[70px]">
+            <!-- <span class="color-337ae5">Th</span><span class="color-408fe5">e</span><span class="color-8a8198"> la</span><span class="color-d4734a">te</span><span class="color-ea6b2e">st. </span> -->
+            <h2 class="inline-block">The latest</h2>
+            <span class="color-gray">Truly awe-inspired gifts.</span>
           </div>
-          <div class="store-flex-box">
-            <div>
-              <img src="../images/store-iphone17pro.png" alt="store-iphone17pro">
-              <div class="store-item-desc">
-                <h3>iPhone 17 Pro</h3>
-                <p>From $1599 or $66.62 /mo. per month for 24 mo.<br>at 0.00% APR  Footnote ‡</p>
+          <div class="slider">
+            <div class="store-flex-box
+                         scroll-smooth snap-x snap-mandatory flex space-x-4 p-8">
+              <div class="store-flex-box-lg store-flex-box-item">
+                <img src="../images/store-iphone17pro.png" alt="store-iphone17pro">
+                <div class="store-item-desc">
+                  <h3>iPhone 17 Pro</h3>
+                  <p>From $1599 or $66.62 /mo. per month for 24 mo.<br>at 0.00% APR  Footnote ‡</p>
+                </div>
               </div>
-            </div>
-            <div>
-              <img src="../images/store-macbook-pro.png" alt="store-macbook-pro">
-              <div class="store-item-desc">
-                <h3>MacBook Pro 14” with M5</h3>
-                <p>From $2099 or $66.62 /mo. per month for 24 mo.<br>at 0.00% APR  Footnote ‡</p>
+              <div class="store-flex-box-lg store-flex-box-item">
+                <img src="../images/store-macbook-pro.png" alt="store-macbook-pro">
+                <div class="store-item-desc">
+                  <h3>MacBook Pro 14” with M5</h3>
+                  <p>From $2099 or $66.62 /mo. per month for 24 mo.<br>at 0.00% APR  Footnote ‡</p>
+                </div>
               </div>
-            </div>
-            <div>
-              <img src="../images/store-ipad-pro.png" alt="store-ipad-pro">
-              <div class="store-item-desc">
-                <h3>iPad Pro</h3>
-                <p>From $1399 or $66.62 /mo. per month for 24 mo.<br>at 0.00% APR  Footnote ‡</p>
+              <div class="store-flex-box-lg store-flex-box-item">
+                <img src="../images/store-ipad-pro.png" alt="store-ipad-pro">
+                <div class="store-item-desc">
+                  <h3>iPad Pro</h3>
+                  <p>From $1399 or $66.62 /mo. per month for 24 mo.<br>at 0.00% APR  Footnote ‡</p>
+                </div>
               </div>
             </div>
           </div>
@@ -176,33 +226,38 @@
           <div class="store-section-title">
             <span class="color-337ae5">Per</span><span class="color-408fe5">son</span><span class="color-8a8198">ali</span><span class="color-d4734a">zat</span><span class="color-ea6b2e">ion. </span><span class="color-gray">Make it one of a kind.</span>
           </div>
-          <div class="store-flex-box">
-            <div>
-              <img class="store-prod-img" src="../images/store-engraving.png" alt="store-engraving">
-              <div class="store-item-desc">
-                <p>FREE ENGRAVING</p>
-                <h3>From you, Especially<br>for them.</h3>
-              </div>
-            </div>
-            <div class="store-prod-box">
-              <img src="../images/store-ipad-air-select.png" alt="store-ipad-air-select">
-              <div class="store-prod-desc">
-                <p>11-inch iPad Air</p>
-                <span>$799.00</span>
-              </div>
-            </div>
-            <div class="store-prod-box">
-              <img src="../images/store-airpodspro3-select.png" alt="store-airpodspro3-select">
-              <div class="store-prod-desc">
-                <p>AirPods Pro 3</p>
-                <span>$329.00</span>
-              </div>
-            </div>
-            <div class="store-prod-box">
-              <img src="../images/store-airtag-select.png" alt="store-airpodspro3-select">
-              <div class="store-prod-desc">
-                <p>AirTag</p>
-                <span>$39.00</span>
+          <div class="slider">
+            <div class="store-flex-box
+                         scroll-smooth snap-x snap-mandatory flex space-x-4 p-8">
+              <div class="store-flex-box">
+                <div class="store-flex-box-lg store-flex-box-item">
+                  <img class="store-prod-img object-cover" src="../images/store-engraving.png" alt="store-engraving">
+                  <div class="store-item-desc">
+                    <p>FREE ENGRAVING</p>
+                    <h3>From you, Especially<br>for them.</h3>
+                  </div>
+                </div>
+                <div class="store-prod-box store-flex-box-item">
+                  <img src="../images/store-ipad-air-select.png" alt="store-ipad-air-select">
+                  <div class="store-prod-desc">
+                    <p>11-inch iPad Air</p>
+                    <span>$799.00</span>
+                  </div>
+                </div>
+                <div class="store-prod-box store-flex-box-item">
+                  <img src="../images/store-airpodspro3-select.png" alt="store-airpodspro3-select">
+                  <div class="store-prod-desc">
+                    <p>AirPods Pro 3</p>
+                    <span>$329.00</span>
+                  </div>
+                </div>
+                <div class="store-prod-box store-flex-box-item">
+                  <img src="../images/store-airtag-select.png" alt="store-airpodspro3-select">
+                  <div class="store-prod-desc">
+                    <p>AirTag</p>
+                    <span>$39.00</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
