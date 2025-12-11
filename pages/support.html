@@ -26,7 +26,8 @@
 <body>
     <header>
         <nav id="globalnav"    
-            class="justify-between px-4
+            class="justify-between px-4 fixed
+                  md:static
                   lg:justify-center">
             <!--logo-->
             <a href="../index.html">
@@ -43,7 +44,7 @@
             ============================ -->
             <!-- mobile navigation -->
             <nav class="fixed top-0 left-0 bg-[#fafafc] flex flex-col gap-8 w-full 
-                        h-[47rem] z-[100] py-4 px-4 items-center font-light text-[0.9rem]
+                        h-[100vh] z-[100] py-4 px-4 items-center font-light text-[0.9rem]
                         -translate-y-full opacity-0 peer-checked:translate-y-0 peer-checked:opacity-100
                         transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
                         md:hidden md:peer-checked:hidden">
@@ -148,8 +149,8 @@
         </nav>
     </header>
     <main>
-        <section class="banner-wrapper flex justify-center
-                        md:h-[600px]">
+        <section class="banner-wrapper flex justify-center pt-12
+                        md:h-[600px] md:pt-0">
             <img src="../images/support-banner.png" alt="support-banner"
                 class="hidden w-full h-full
                         md:inline-block">
@@ -159,9 +160,12 @@
         </section>
         <section class="support-wrapper pt-4
                         md:gap-24 md:pt-16">
-            <div>
+            <div class="flex flex-col gap-4">
                 <h1 class="text-[40px] font-medium
-                            md:text-[48px]">Apple Support</h1>
+                            md:text-[48px]
+                            lg:text-[64px]">Apple Support</h1>
+                <p class="text-[1.31rem] font-light
+                        md:text-[1.5rem]">Need help? Start here.</p>
             </div>
             <div class="support-img-box flex-wrap
                         md:px-[140px]
@@ -190,6 +194,9 @@
                     <img src="../images/airpods-small.png" alt="items-airpods" />
                     <a href="#">AirPods</a>
                 </div>
+            </div>
+            <div>
+                <h2>Support Tools</h2>
             </div>
             <div class="as-title-wrapper flex-wrap" style="gap: 25px;">
                 <div>
