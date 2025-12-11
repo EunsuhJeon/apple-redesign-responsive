@@ -3,56 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./main.css">
+    <title>Join community</title>
+    <link rel="stylesheet" href="../main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="home-page">
+<body>
     <header>
-        <!-- global navigation -->
-        <nav id="globalnav"
+        <nav id="globalnav"    
             class="justify-between px-4 fixed
                   md:static
                   lg:justify-center">
-            <!--logo--> 
-            <a href="#">
-                <img src="./images/logo.png" alt="Apple logo">
+            <!--logo-->
+            <a href="../index.html">
+                <img src="../images/logo-bl.png" alt="Apple logo" />
             </a>
             <input type="checkbox" name="menu" id="menu"
                     class="peer hidden">
             <label for="menu"
                     class="lg:hidden">
-            <img src="../images/menu-wh.png" alt="menu">
+            <img src="../images/menu.png" alt="menu">
             </label>
             <!-- ============================
                 navigation (mobile only)
             ============================ -->
             <!-- mobile navigation -->
-            <nav class="fixed top-0 left-0 bg-[var(--dropdown-bg-color)] flex flex-col gap-8 w-full 
-                        h-[100vh] z-[100] py-4 px-4 items-center font-light text-[0.9rem] text-[var(--menu-text-color)]
+            <nav class="fixed top-0 left-0 bg-[#fafafc] flex flex-col gap-8 w-full 
+                        h-[100vh] z-[100] py-4 px-4 items-center font-light text-[0.9rem]
                         -translate-y-full opacity-0 peer-checked:translate-y-0 peer-checked:opacity-100
                         transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
                         lg:hidden lg:peer-checked:hidden">
                 <label for="menu"
                         class="lg:hidden self-end">
-                <img src="../images/close-wh.png" alt="close">
+                <img src="../images/close.png" alt="close">
                 </label>
                 <div class="flex flex-col items-start gap-8 self-start pl-8 text-[1.8rem] font-medium">
-                    <a href="./index.html" class="hover:text-gray-500">Home</a>
-                    <a href="./pages/store.html" class="hover:text-gray-500">Store</a>
-                    <a href="./pages/accessories.html" class="hover:text-gray-500">Accessories</a>
-                    <a href="./pages/support.html" class="hover:text-gray-500">Support</a>
+                    <a href="../index.html" class="hover:text-gray-500">Home</a>
+                    <a href="./store.html" class="hover:text-gray-500">Store</a>
+                    <a href="./accessories.html" class="hover:text-gray-500">Accessories</a>
+                    <a href="./support.html" class="hover:text-gray-500">Support</a>
                 </div>
             </nav>
             <ul class="hidden
                     lg:inline-block">
                 <li>
-                    <a href="./pages/store.html">Store</a>
-                    <!-- drop-down menu for store -->
+                    <a href="./store.html">Store</a>
                     <div class="dropdown-panel">
                         <div class="panel-col panel-list">
                             <h4>Store</h4>
@@ -84,8 +82,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="./pages/accessories.html">Accessories</a>
-                    <!-- drop-down menu for accessories -->
+                    <a href="./accessories.html">Accessories</a>
                     <div class="dropdown-panel">
                         <div class="panel-col panel-list">
                             <h4>Accessories</h4>
@@ -106,8 +103,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="./pages/support.html">Support</a>
-                    <!-- drop-down menu for support -->
+                    <a href="#">Support</a>
                     <div class="dropdown-panel">
                         <div class="panel-col panel-list">
                             <h4>Explore Support</h4>
@@ -141,104 +137,30 @@
         </nav>
     </header>
     <main>
-        <section class="content-section section-iphon17pro">
-            <div class="flex flex-col">
-                <div class="copy-wrapper h-[inherit]">
-                    <h2>iPhone 17 Pro</h2>
-                    <p>All out Pro.</p>
-                    <div class="copy-button">
-                        <a href="#" class="active">Learn more</a>
-                        <a href="#">Buy</a>
+        <section class="join-form-wrapper">
+            <h1>Sign in to Apple Support Community</h1>
+            <form action="/submit-book-appointment" method="post">
+                <div class="name">
+                    <label for="b-name">Full Name</label><input id="b-name" type="text" name="name" placeholder="eg: Jade Jeon">
+                </div>
+                <div class="email">
+                    <label for="b-email">Email</label><input id="b-email" type="text" name="email" placeholder="eg: jade@email.com">
+                </div>
+                <div class="number">
+                    <label for="b-number">Phone Number</label>
+                    <div id="b-number">
+                        <select name="number"><option value="local" selected>+604</option></select><input type="text" placeholder="1234567">
                     </div>
                 </div>
-                <div class="img-wrapper">
-                    <img src="./images/iphone17pro.png" alt="iphone17pro">
+                <div class="button">
+                    <input type="button" value="Continue">
+                    <input type="submit" value="Sign in">
                 </div>
-            </div>
-        </section>
-        <section class="content-section section-iphonAir">
-            <div class="flex flex-col">
-                <div class="copy-wrapper h-[inherit]">
-                    <h2>iPhone Air</h2>
-                    <p>The thinnest iPhone ever. <br>With the power of pro inside.</p>
-                    <div class="copy-button">
-                        <a href="#" class="active">Learn more</a>
-                        <a href="#">Buy</a>
-                    </div>
-                </div>
-                <div class="img-wrapper">
-                    <img src="./images/iphoneAir.png" alt="iphone17pro">
-                </div>
-            </div>
-        </section>
-        <section class="section-collection grid grid-cols-1
-                        md:grid-cols-2">
-            <div class="item-wrapper">
-                <div class="copy-wrapper">
-                    <h2>AirPods Pro 3</h2>
-                    <p>The world’s best in-ear<br>Active Noise Cancellation.</p>
-                    <div class="copy-button">
-                        <a href="#" class="active">Learn more</a>
-                        <a href="#">Buy</a>
-                    </div>
-                </div>
-                <img src="./images/airPodsPro3.png" alt="airPodsPro3">
-            </div>
-            <div class="item-wrapper">
-                <div class="copy-wrapper">
-                    <h2>Apple Watch Series 11</h2>
-                    <p>The ultimate way to watch your health.</p>
-                    <div class="copy-button">
-                        <a href="#" class="active">Learn more</a>
-                        <a href="#">Buy</a>
-                    </div>
-                </div>
-                <img src="./images/appleWatch11.png" alt="appleWatch11">
-            </div>
-            <div class="item-wrapper">
-                <div class="copy-wrapper color-white">
-                    <h2>iPad Pro</h2>
-                    <p>Advanced AI performance<br>and game-changing capabilities.</p>
-                    <div class="copy-button">
-                        <a href="#" class="active">Learn more</a>
-                        <a href="#">Buy</a>
-                    </div>
-                </div>
-                <img src="./images/ipadPro.jpg" alt="ipadPro">
-            </div>
-            <div class="item-wrapper">
-                <div class="copy-wrapper color-white">
-                    <h2>MacBook Pro 14”</h2>
-                    <p>Supercharged by M5.</p>
-                    <div class="copy-button">
-                        <a href="#" class="active">Learn more</a>
-                        <a href="#">Buy</a>
-                    </div>
-                </div>
-                <img src="./images/macbookProM5.png" alt="macbookProM5">
-            </div>
-            <div class="item-wrapper">
-                <div class="copy-wrapper">
-                    <h2>MacBook Air</h2>
-                    <p>Sky blue colour.<br>Sky‑high performance with M4.</p>
-                    <div class="copy-button">
-                        <a href="#" class="active">Learn more</a>
-                        <a href="#">Buy</a>
-                    </div>
-                </div>
-                <img src="./images/macbookAir.png" alt="macbookAir">
-            </div>
-            <div class="item-wrapper">
-                <div class="copy-wrapper">
-                    <h2>Apple Trade In</h2>
-                    <p>Get $250 to $985 in credit<br>when you trade in iPhone 13<br>or higher.</p>
-                    <div class="copy-button">
-                        <a href="#" class="active">Learn more</a>
-                        <a href="#">Buy</a>
-                    </div>
-                </div>
-                <img src="./images/TradeIn.png" alt="TradeIn">
-            </div>
+            </form>
+            <img src="../images/privacy-icon.png" alt="privacy-icon" class="privacy-icon">
+            <span class="privacy-desc">Your Apple Account information is used to allow you to sign in securely and access your data. Apple records certain data for security, support, and reporting purposes. If you agree, Apple may also use your Apple Account information to send you marketing emails and communications, including based on your use of Apple services. 
+                <a href="#">See how your data is managed...</a>
+            </span>
         </section>
     </main>
     <footer>

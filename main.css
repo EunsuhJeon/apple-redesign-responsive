@@ -93,7 +93,7 @@ header{
 .dropdown-panel{
     position: absolute;
     /* background-color: rgba(22, 22, 23); */
-    background-color: var(--menu-bg-color);
+    background-color: var(--dropdown-bg-color);
     top: 48px;
     left: 0;
     width: 100vw;
@@ -103,21 +103,19 @@ header{
     /* display: none; */
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 20px;
-/*  */
     max-height: 0;
     opacity: 0;
     transform: translateY(-10px);
     transition: max-height 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
-
     display:grid;
+    pointer-events: none;
 }
 
 #globalnav > ul > li:hover .dropdown-panel{
-    /* display:grid; */
-    /*  */
     max-height: 800px;
     opacity: 1;
     transform: translateY(0);
+    pointer-events: auto;
 }
 
 .panel-col{
@@ -965,6 +963,198 @@ section {
 @media (min-width: 768px){
     .search-wrapper input{
         width: 600px;
+    }
+}
+
+.support-community-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.support-community-icon{
+    width: 100px;
+}
+
+/* =========================
+   Join form page
+========================= */
+.join-form-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 30px;
+    border-radius: 10px;
+    gap: 2rem;
+}
+
+.join-form-wrapper h1{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.join-form-wrapper form{
+    padding-top: 50px;
+    gap: 20px;
+}
+
+.join-form-wrapper form > div{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 50px 50px;
+}
+
+.join-form-wrapper form > div:last-child{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 1rem;
+}
+
+.join-form-wrapper form > div:last-child input{
+    flex: 1;
+    height: 38px;
+}
+
+.join-form-wrapper form input,
+.join-form-wrapper form select{
+    border: none;
+    background-color: #F6F9FF;
+    border-radius: 7px;
+    padding: 0 15px;
+}
+
+.join-form-wrapper #b-number select,
+.join-form-wrapper #b-number input{
+    height: 100%;
+}
+
+.join-form-wrapper form #b-number select{
+    width: 20%;
+    border-radius: 7px 0 0 7px;
+}
+
+.join-form-wrapper form #b-number input{
+    width: 80%;
+    border-radius: 0 7px 7px 0;
+}
+
+.join-form-wrapper input[type=button]{
+    background-color: #93c3f3;
+    /* rgb(0, 113, 227) */
+    color: #ffffff;
+}
+
+.join-form-wrapper input[type=submit]{
+    background-color: rgb(29, 29, 31);
+    color: #ffffff;
+}
+
+.join-form-wrapper label{
+    align-self: center;
+}
+
+.privacy-icon{
+    width: 40px;
+}
+
+.privacy-desc{
+    width: 100%;
+    font-size: 12px;
+    color: rgb(73, 73, 73);
+}
+
+.privacy-desc a{
+    color: rgb(0, 102, 204);
+}
+
+.privacy-desc a:hover{
+    text-decoration: underline;
+}
+
+@media (min-width: 768px){
+    .join-form-wrapper h1{
+        font-size: 32px;
+    }
+    .privacy-desc{
+        width: 500px;
+    }
+
+    .join-form-wrapper form{
+        width: 500px;
+    }
+}
+/* =========================
+   404 error page
+========================= */
+.error-page {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    gap: 20px;
+}
+
+.error-page > main{
+    padding: 20px;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-page > main h1 {
+    font-size: 10rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.error-page > main h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.error-page > main p {
+    font-size: 1rem;
+    color: #6e6e73;
+    margin-bottom: 30px;
+}
+
+.error-page > main .error-btn {
+    text-decoration: none;
+    color: white;
+    background-color: #0071e3;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.error-page > main a:hover {
+    background-color: #005bb5;
+}
+
+@media (max-width: 600px) {
+    .error-page > main h1 {
+        font-size: 6rem;
+    }
+    .error-page > main h2 {
+        font-size: 1.5rem;
+    }
+    .error-page > main a {
+        padding: 12px 24px;
+        font-size: 0.95rem;
     }
 }
 
