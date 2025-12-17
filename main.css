@@ -9,8 +9,6 @@
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
 }
 
 html, body {
@@ -304,7 +302,7 @@ section {
     }
 
     .section-collection .copy-wrapper p{
-        font-size: 21;
+        font-size: 21px;
         padding-top: 10px;
     }
 }
