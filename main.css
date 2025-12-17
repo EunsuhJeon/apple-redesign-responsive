@@ -591,7 +591,6 @@ section {
 
 .store-item-section img{
     height: 100%;
-    /* margin-right: 20px; */
     width: 100%;
     object-fit: cover;
     display: block;
@@ -600,7 +599,6 @@ section {
 .store-prod-img{
     width: 100%;
     height: 480px;
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); */
     border-radius: 18px;
     margin-right: 20px;
 }
@@ -875,17 +873,13 @@ section {
 ========================= */
 .banner-wrapper{
   width: 100%;
-  /* height: 600px; */
   overflow: hidden;
   box-sizing: border-box;
-  /* padding-top: 50px; */
 }
 
 .banner-wrapper img {
-  /* width: 100%;
-  height: 100%; */
-  object-fit: cover;  
-  object-position: center;
+    object-fit: cover;  
+    object-position: center;
 }
 
 .support-wrapper > div{
@@ -955,6 +949,11 @@ section {
 @media (min-width: 768px){
     .search-wrapper input{
         width: 600px;
+    }
+
+    .banner-wrapper img {
+        width: 100%;
+        height: 100%;
     }
 }
 
