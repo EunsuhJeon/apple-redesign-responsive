@@ -154,7 +154,7 @@
             <img src="../images/support-banner.png" alt="support-banner"
                 class="hidden w-full h-full
                         md:inline-block">
-            <img src="../images/support-apple-logo.png" alt="support-logo"
+            <img src="../images/icons/support-apple-logo.webp" alt="support-logo"
                 class="w-[160px] h-[160px]
                         md:hidden">
         </section>
@@ -219,7 +219,7 @@
                 <input type="text" name="search" placeholder="Search Support">
             </div>
             <div class="support-community-wrapper">
-                <img class="support-community-icon" src="../images/chat.png" alt="chat">
+                <img class="support-community-icon" src="../images/icons/chat.webp" alt="chat">
                 <h2>New to the community?</h2>
                 <div class="copy-button">
                     <a href="./join-form.html" class="active">Join now</a>
@@ -232,70 +232,44 @@
                     FAQ
                 </h2>
 
-                <div class="space-y-4">
-                    <!-- FAQ Item 1 -->
-                    <div class="border border-gray-200 rounded-lg bg-white overflow-hidden">
-                    <input type="checkbox" id="faq1" class="hidden" />
-                    <label for="faq1" class="w-full px-6 py-4 text-left flex justify-between items-center cursor-pointer"> 
-                        <span class="font-medium">What is Apple One?</span>
-                        <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /> </svg>
-                    </label>
-                    <div class="px-6 text-gray-700 max-h-0 overflow-hidden transition-all duration-300">
-                        Apple One bundles up to six Apple services into a single
-                        subscription. It’s easy to manage and saves you money.
-                    </div>
+                <div class="faq">
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq1">
+                        <label for="faq1">
+                        <span>What is Apple One?</span>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                        </label>
+                        <div class="answer">
+                        Apple One bundles up to six Apple services into a single subscription. It’s easy to manage and saves you money.
+                        </div>
                     </div>
 
-                    <!-- FAQ Item 2 -->
-                    <div class="border border-gray-200 rounded-lg bg-white overflow-hidden">
-                    <input type="checkbox" id="faq2" class="hidden" />
-                    <label for="faq2" class="w-full px-6 py-4 text-left flex justify-between items-center cursor-pointer"
-                    >
-                        <span class="font-medium">How do I track my Apple order?</span>
-                        <svg
-                        class="w-5 h-5 transition-transform duration-200"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        >
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"
-                        />
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq2">
+                        <label for="faq2">
+                        <span>How do I track my Apple order?</span>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M19 9l-7 7-7-7"></path>
                         </svg>
-                    </label>
-                    <div
-                        class="px-6 text-gray-700 max-h-0 overflow-hidden transition-all duration-300"
-                    >
-                        You can track your order by signing in to your Apple account and
-                        checking your order history.
-                    </div>
+                        </label>
+                        <div class="answer">
+                        You can track your order by signing in to your Apple account and checking your order history.
+                        </div>
                     </div>
 
-                    <!-- FAQ Item 3 -->
-                    <div class="border border-gray-200 rounded-lg bg-white overflow-hidden">
-                    <input type="checkbox" id="faq3" class="hidden" />
-                    <label
-                        for="faq3"
-                        class="w-full px-6 py-4 text-left flex justify-between items-center cursor-pointer"
-                    >
-                        <span class="font-medium"
-                        >Can I return a product purchased online?</span
-                        >
-                        <svg
-                        class="w-5 h-5 transition-transform duration-200"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        >
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"
-                        />
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq3">
+                        <label for="faq3">
+                        <span>Can I return a product purchased online?</span>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M19 9l-7 7-7-7"></path>
                         </svg>
-                    </label>
-                    <div
-                        class="px-6 text-gray-700 max-h-0 overflow-hidden transition-all duration-300"
-                    >
-                        Yes, products purchased online can be returned within 14 days. Check
-                        Apple’s return policy for details.
-                    </div>
+                        </label>
+                        <div class="answer">
+                        Yes, products purchased online can be returned within 14 days. Check Apple’s return policy for details.
+                        </div>
                     </div>
                 </div>
             </div>
